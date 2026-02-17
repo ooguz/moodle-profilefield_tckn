@@ -1,8 +1,7 @@
+<?php
 /**
  * @copyright 2026 Özcan Oğuz <ozcan@antandros.com.tr>
  */
-
-<?php
     namespace profilefield_tckn\privacy;
 
     defined('MOODLE_INTERNAL') || die();

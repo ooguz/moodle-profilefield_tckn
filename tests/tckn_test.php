@@ -1,8 +1,7 @@
+<?php
 /**
  * @copyright 2026 Özcan Oğuz <ozcan@antandros.com.tr>
  */
-
-<?php
     defined('MOODLE_INTERNAL') || die();
 
     use profilefield_tckn\tckn;

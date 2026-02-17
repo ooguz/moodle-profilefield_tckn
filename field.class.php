@@ -1,8 +1,7 @@
+<?php
 /**
  * @copyright 2026 Özcan Oğuz <ozcan@antandros.com.tr>
  */
-
-<?php
     defined('MOODLE_INTERNAL') || die();
 
     // Extend the built-in TEXT profile field type to inherit form rendering logic.
