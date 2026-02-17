@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Background circle with Turkish red -->
+  <circle cx="50" cy="50" r="48" fill="#E30A17"/>
+  
+  <!-- White card shape representing ID card -->
+  <rect x="18" y="30" width="64" height="42" rx="5" ry="5" fill="white"/>
+  
+  <!-- Red stripe on card top -->
+  <rect x="18" y="30" width="64" height="10" rx="5" ry="5" fill="#C0392B"/>
+  <rect x="18" y="35" width="64" height="5" fill="#C0392B"/>
+  
+  <!-- TR text on card header -->
+  <text x="50" y="39" font-family="Georgia, serif" font-size="7" font-weight="bold" fill="white" text-anchor="middle">T.C.</text>
+  
+  <!-- ID number lines (representing TC Kimlik No) -->
+  <!-- Label -->
+  <text x="26" y="51" font-family="Arial, sans-serif" font-size="5" fill="#555" font-weight="bold">TC KİMLİK NO</text>
+  
+  <!-- 11-digit number representation as dots/dashes -->
+  <rect x="26" y="54" width="48" height="4" rx="2" fill="#ddd"/>
+  <!-- Individual digit slots -->
+  <rect x="27" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="31" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="35" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="39" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="43" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="47" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="51" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="55" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="59" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="63" y="55" width="3" height="2" rx="1" fill="#888"/>
+  <rect x="67" y="55" width="3" height="2" rx="1" fill="#888"/>
+  
+  <!-- Name line -->
+  <text x="26" y="64" font-family="Arial, sans-serif" font-size="4.5" fill="#777">AD SOYAD</text>
+  <rect x="26" y="66" width="30" height="2" rx="1" fill="#ccc"/>
+  
+  <!-- Star and crescent watermark (subtle) -->
+  <text x="72" y="68" font-family="Arial, sans-serif" font-size="10" fill="#E30A17" opacity="0.3">☾</text>
+</svg>
