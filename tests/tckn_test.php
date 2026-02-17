@@ -2,12 +2,12 @@
 /**
  * @copyright 2026 Özcan Oğuz <ozcan@antandros.com.tr>
  */
-    defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die();
 
-    use profilefield_tckn\tckn;
+use profilefield_tckn\tckn;
 
-    class profilefield_tckn_tckn_testcase extends advanced_testcase
-    {
+class profilefield_tckn_tckn_testcase extends advanced_testcase
+{
 
     public function test_invalid_values()
     {

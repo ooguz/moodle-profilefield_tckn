@@ -2,13 +2,13 @@
 /**
  * @copyright 2026 Özcan Oğuz <ozcan@antandros.com.tr>
  */
-    defined('MOODLE_INTERNAL') || die();
+defined('MOODLE_INTERNAL') || die();
 
-    // Extend the built-in TEXT profile field type to inherit form rendering logic.
-    require_once $CFG->dirroot . '/user/profile/field/text/field.class.php';
+// Extend the built-in TEXT profile field type to inherit form rendering logic.
+require_once $CFG->dirroot . '/user/profile/field/text/field.class.php';
 
-    class profile_field_tckn extends profile_field_text
-    {
+class profile_field_tckn extends profile_field_text
+{
 
     public function edit_validate_field($usernew)
     {

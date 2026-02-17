@@ -3,7 +3,8 @@ namespace profilefield_tckn;
 
 defined('MOODLE_INTERNAL') || die();
 
-class tckn {
+class tckn
+{
     /**
      * Validate Turkish Identification Number (TCKN).
      *
@@ -11,10 +12,11 @@ class tckn {
      * - First digit cannot be 0
      * - Checksum rules for 10th and 11th digits
      */
-    public static function is_valid(string $value): bool {
+    public static function is_valid(string $value): bool
+    {
         $value = trim($value);
 
-        if (!preg_match('/^[1-9][0-9]{10}$/', $value)) {
+        if (! preg_match('/^[1-9][0-9]{10}$/', $value)) {
             return false;
         }
 
