@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+*.swp
+/vendor/
+node_modules/
+.vscode/
