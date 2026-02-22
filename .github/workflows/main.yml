@@ -1,0 +1,14 @@
+name: Test Moodle plugin (no database)
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout action code
+        uses: actions/checkout@v4
+
+      - name: Moodle CI PHP 8.3 Moodle 5.0
+        uses: gfrancv/moodle-plugin-ci-action@v1.1.0
+        with:
+          php-version: 8.3
+          moodle-branch: MOODLE_500_STABLE
