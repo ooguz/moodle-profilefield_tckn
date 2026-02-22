@@ -1,0 +1,55 @@
+name: Build release zip
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write  # needed to create/update a GitHub Release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build plugin zip (folder name forced to "tckn")
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          TAG="${GITHUB_REF_NAME}"   # e.g. v1.0.3
+          ZIP="profilefield_tckn-${TAG}.zip"
+
+          rm -rf dist
+          mkdir -p dist/tckn
+
+          # Copy repo contents to dist/tckn while excluding dev/CI junk.
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude '.gitignore' \
+            --exclude '.gitattributes' \
+            --exclude '.editorconfig' \
+            --exclude '.idea/' \
+            --exclude '.vscode/' \
+            --exclude 'node_modules/' \
+            --exclude 'vendor/' \
+            --exclude '*.zip' \
+            ./ dist/tckn/
+
+          # Optional: ensure no nested dist from previous runs
+          rm -rf dist/tckn/dist || true
+
+          (cd dist && zip -r "../${ZIP}" "tckn")
+
+          echo "ZIP_NAME=${ZIP}" >> "$GITHUB_ENV"
+
+      - name: Create GitHub Release and upload zip
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ env.ZIP_NAME }}
+          generate_release_notes: true
